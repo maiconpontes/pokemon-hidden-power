@@ -1,91 +1,85 @@
 function calcular() {
-    var hp = parseInt(document.getElementById('hp').value);
-    var atk = parseInt(document.getElementById('atk').value);
-    var def = parseInt(document.getElementById('def').value);
-    var spatk = parseInt(document.getElementById('spatk').value);
-    var spdef = parseInt(document.getElementById('spdef').value);
-    var spe = parseInt(document.getElementById('spe').value);
+    var hp = parseInt(document.getElementById('hp').value) % 2;
+    var atk = parseInt(document.getElementById('atk').value)% 2;
+    var def = parseInt(document.getElementById('def').value)% 2;
+    var spatk = parseInt(document.getElementById('spatk').value)% 2;
+    var spdef = parseInt(document.getElementById('spdef').value)% 2;
+    var spe = parseInt(document.getElementById('spe').value)% 2;
 
-    hp = hp % 2;
-    atk = atk % 2;
-    def = def % 2;
-    spatk = spatk % 2;
-    spdef = spdef % 2;
-    spe = spe % 2;
-
-    var sum = ((1*hp) + (2*atk) + (4*def) + (8*spe) + (16*spatk) + (32*spdef)) * 15;
-    sum = sum/63;
+    var sum = (((1*hp) + (2*atk) + (4*def) + (8*spe) + (16*spatk) + (32*spdef)) * 15) / 63;
 
     switch(Math.floor(sum)){
         case 0:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Fighting";
-          document.getElementById('resultado').style.color = "red";
+          innerHtmlText = "The Hidden Power type is Fighting"
+          styleColor = "red"
           break;
         case 1:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Flying";
-          document.getElementById('resultado').style.color = "cornflowerblue";
+          innerHtmlText = "The Hidden Power type is Flying";
+          styleColor = "cornflowerblue";
           break;
         case 2:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Poison";
-          document.getElementById('resultado').style.color = "purple";
+          innerHtmlText = "The Hidden Power type is Poison";
+          styleColor = "purple";
           break;
         case 3:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Ground";
-          document.getElementById('resultado').style.color = "darkgoldenrod";
+          innerHtmlText = "The Hidden Power type is Ground";
+          styleColor = "darkgoldenrod";
           break;
         case 4:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Rock";
-          document.getElementById('resultado').style.color = "olive";
+          innerHtmlText = "The Hidden Power type is Rock";
+          styleColor = "olive";
           break;
         case 5:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Bug";
-          document.getElementById('resultado').style.color = "lime";
+          innerHtmlText = "The Hidden Power type is Bug";
+          styleColor = "lime";
           break;
         case 6:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Ghost";
-          document.getElementById('resultado').style.color = "midnightblue";
+          innerHtmlText = "The Hidden Power type is Ghost";
+          styleColor = "midnightblue";
           break;
         case 7:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Steel";
-          document.getElementById('resultado').style.color = "grey";
+          innerHtmlText = "The Hidden Power type is Steel";
+          styleColor = "grey";
           break;
         case 8:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Fire";
-          document.getElementById('resultado').style.color = "orangered";
+          innerHtmlText = "The Hidden Power type is Fire";
+          styleColor = "orangered";
           break;
         case 9:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Water";
-          document.getElementById('resultado').style.color = "navy";
+          innerHtmlText = "The Hidden Power type is Water";
+          styleColor = "navy";
           break;
         case 10:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Grass";
-          document.getElementById('resultado').style.color = "green";
+          innerHtmlText = "The Hidden Power type is Grass";
+          styleColor = "green";
           break;
         case 11:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Electric";
-          document.getElementById('resultado').style.color = "yellow";
+          innerHtmlText = "The Hidden Power type is Electric";
+          styleColor = "yellow";
           break;
         case 12:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Psychic";
-          document.getElementById('resultado').style.color = "crimson";
+          innerHtmlText = "The Hidden Power type is Psychic";
+          styleColor = "crimson";
           break;
         case 13:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Ice";
-          document.getElementById('resultado').style.color = "deepskyblue";
+          innerHtmlText = "The Hidden Power type is Ice";
+          styleColor = "deepskyblue";
           break;
         case 14:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Dragon";
-          document.getElementById('resultado').style.color = "darkslategrey";
+          innerHtmlText = "The Hidden Power type is Dragon";
+          styleColor = "darkslategrey";
           break;
         case 15:
-          document.getElementById('resultado').innerHTML = "The Hidden Power type is Dark";
-          document.getElementById('resultado').style.color = "slategrey";
+          innerHtmlText = "The Hidden Power type is Dark";
+          styleColor = "slategrey";
           break;
         default:
           document.getElementById('resultado').innerHTML = "Invalid input";
           break;
       }
       
+      document.getElementById('resultado').innerHTML = innerHtmlText
+      document.getElementById('resultado').style.color = styleColor
     
     
 
